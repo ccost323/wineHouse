@@ -1,0 +1,25 @@
+.form-group, h3 {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+  color: red;
+  font-family: "Cormorant_Garamond";
+}
+
+button, input{
+    font-family: "Cormorant_Garamond";
+    font-size: 20px;
+  }
+
+  input {
+    margin-top: 10px
+  }
+
+  button {
+    margin: auto;
+    display: flex;
+    margin-top: 10px;
+  }

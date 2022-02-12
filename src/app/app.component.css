@@ -1,0 +1,59 @@
+.full-bleed {
+    margin: auto;
+    width: 70vw;
+  }
+
+  h1 {
+      text-align: center;
+      font-family: "Cormorant_SC";
+      font-size: 60px;
+  }
+
+  main {
+      margin-top:50px;
+      
+  }
+
+ .nav-bar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-bottom: 1px solid #bbb;
+ } 
+
+ li {
+    float: left;
+    border-right:1px solid #bbb;
+  }
+
+  li:last-child {
+    border-right: none;
+  }
+
+  li a {
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: "Cormorant_SC";
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+  }
+
+  li a:hover {
+    background-color: #ddd;
+  }
+
+  li a.active {
+    background-color: #ddd;
+  }
+
+  .user-tabs  {
+    float: right;
+  }
+
+
+
+  

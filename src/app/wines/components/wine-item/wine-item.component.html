@@ -1,0 +1,21 @@
+<div class="wine-item" [ngClass]="{notSale: !wine.isOnSale, sale: wine.isOnSale}">
+
+  <div class="image" routerLink="/wines/{{wine.id}}"><img [src]="wine.imageUrl"/></div>
+  <div class="details">
+    <div class="wine-name">{{ wine.name }}</div>
+    <div>{{ wine.price }} €</div>
+    <div *ngIf = "!wine.isOnSale">Not available</div> 
+
+    <ng-container *ngIf = "wine.isOnSale">
+    <select class = "select" (click)="selectInCart($event.target)">
+        <option [value] = "num" *ngFor = "let num of quantityArr" [selected] = "num === wine.quantityInCart"> {{num}}</option>
+    </select>
+    
+    <div>
+        <button *ngIf="wine.quantityInCart > 0" (click)="decrementInCart()">-</button>
+        <span>{{ wine.quantityInCart }}</span>
+        <button *ngIf="wine.quantityInCart < 20" (click)="incrementInCart()">+</button>
+    </div>
+   </ng-container>
+  </div>
+</div>

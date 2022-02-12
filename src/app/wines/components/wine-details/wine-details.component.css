@@ -1,0 +1,48 @@
+
+.full-bleed {
+  margin: auto;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  }
+
+.container {
+    border: thick double #474949;
+    border-radius: 10px;
+    font-family: "Cormorant_Garamond";
+    font-size: 20px;
+    align-items: center;
+    display: inline-flex;
+    padding: 20px
+}
+
+.info {
+    margin-left: 20px;
+}
+
+img {
+    border: ridge #dfdddd;
+}
+
+.container.notSale {
+    background: rgb(236, 158, 158);
+  }
+
+.container.sale {
+    background: rgb(198, 245, 200);
+  }
+
+.not-available {
+    color: rgb(122, 31, 31);
+
+  }
+
+.available {
+    color:rgb(17, 104, 21);
+}
+
+.not-available, .available {
+font-size: 25px;
+margin-top: 20px;
+font-weight: 700;
+}

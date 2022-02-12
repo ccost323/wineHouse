@@ -1,0 +1,19 @@
+
+<body class = "full-bleed">
+<h1>Wine House</h1>
+<ul class = "nav-bar">
+    <span class = "wine-tabs">
+      <li><a routerLinkActive="active" routerLink="/wines/list">Wines List</a></li>
+      <li><a routerLinkActive="active" routerLink="/wines/new">Create a New Wine</a></li>
+    </span>
+    <span class = "user-tabs">
+      <li><a routerLinkActive="active" routerLink="user/login">Login</a></li>
+      <li><a routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+        true}" routerLink="user/register">Register</a></li>
+    </span>
+  </ul>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+</body>

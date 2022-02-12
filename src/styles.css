@@ -1,0 +1,12 @@
+@font-face {
+    font-family: "Cormorant_Garamond";
+    src: local("Cormorant_Garamond"), url(./assets/fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Cormorant_SC";
+    src: local("Cormorant_SC"), url(./assets/fonts/Cormorant_SC/CormorantSC-Medium.ttf) format("truetype");
+}
+
+
+

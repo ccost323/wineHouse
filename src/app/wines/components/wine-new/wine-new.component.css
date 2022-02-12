@@ -1,0 +1,39 @@
+.error {
+    color: red;
+  }
+
+  .form-container {
+    margin: auto;
+    justify-content: center;
+    border: thick double #474949;
+    width: 40vw;
+    padding: 10px;
+  }
+  
+  h2 {
+    font-family: "Cormorant_SC";
+    font-size: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  .fields-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+  }
+
+  button, input{
+    font-family: "Cormorant_Garamond";
+    font-size: 20px;
+  }
+
+  input {
+    margin-top: 10px
+  }
+
+  button {
+    margin: auto;
+    display: flex;
+  }

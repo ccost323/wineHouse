@@ -1,0 +1,43 @@
+.wine-item {
+  border: thick double #474949;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+    font-family: "Cormorant_Garamond";
+    font-size: 20px;
+    height: 100%;
+  }
+
+  .wine-name {
+    font-family: "Cormorant_SC";
+  }
+  
+  .wine-item .details {
+    text-align: center;
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+  }
+
+  .image img {
+    border: ridge #dfdddd;
+  }
+  
+  .wine-item.notSale {
+    background: rgb(236, 158, 158);
+  }
+
+  .wine-item.sale {
+    background: rgb(198, 245, 200);
+  }
+
+  select {
+    margin: 5px;
+  }
+
+  button, select {
+    font-family: "Cormorant_Garamond";
+    font-size: 20px;
+  }

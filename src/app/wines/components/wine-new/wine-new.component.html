@@ -1,0 +1,85 @@
+
+<div class = "form-container">
+
+<h2>
+    Create Wine
+  </h2>
+  
+  <div class = "fields-container">
+    <form (ngSubmit)="createWine()" [formGroup]="wineForm">
+      <div>
+          <input
+            type="text"
+            name="name"
+            placeholder="Wine Name"
+            formControlName="name"
+            required
+          />
+        </div>
+        <div
+          class="error"
+          *ngIf="
+            (wineForm.get('name').dirty || message) &&
+            wineForm.get('name').invalid
+          "
+        >
+          <div *ngIf="wineForm.get('name').errors.required">
+            Wine name is required
+          </div>
+          <div *ngIf="wineForm.get('name').errors.wineNameInvalid">
+            Wine name is invalid
+          </div>
+        </div>
+        <div>
+          <input
+            type="number"
+            name="price"
+            placeholder="Wine Price"
+            formControlName="price"
+          />
+        </div>
+        <div
+          class="error"
+          *ngIf="
+            (wineForm.get('price').dirty || message) &&
+            wineForm.get('price').invalid
+          "
+        >
+          <div *ngIf="wineForm.get('price').errors.required">
+            Wine price is required
+          </div>
+          <div *ngIf="wineForm.get('price').errors.min">
+            Wine price must be at least 1
+          </div>
+        </div>
+        <div>
+          <input
+            type="text"
+            name="imageUrl"
+            placeholder="Wine Image URL"
+            formControlName="imageUrl"
+          />
+        </div>
+        <div
+          class="error"
+          *ngIf="
+            (wineForm.get('imageUrl').dirty || message) &&
+            wineForm.get('imageUrl').invalid
+          "
+        >
+          <div *ngIf="wineForm.get('imageUrl').errors.required">
+            Wine Image URL is required
+          </div>
+          <div *ngIf="wineForm.get('imageUrl').errors.pattern">
+            Wine Image URL does not seem to be a valid URL
+          </div>
+        </div>
+        <div>
+          <input type="checkbox" formControlName="isOnSale" name="isOnSale" />On
+          Sale
+        </div>
+      <button type="submit">Create</button>
+    </form>
+  </div>
+
+</div>

@@ -1,0 +1,48 @@
+
+  <div class= "search-container">
+    <input
+      name="searchBox"
+      [(ngModel)]="searchString"
+      placeholder="Search Here"
+      (keyup)="search()"
+    />
+  </div>
+  <h3>
+    We have found {{(wines$ | async)?.length}}  
+    <span *ngIf="(wines$ | async)?.length === 1"> wine!</span>
+    <span *ngIf="(wines$ | async)?.length > 1 || (wines$ | async)?.length === 0"> wines!</span>
+  </h3>
+
+  <div class ="buttons-container">
+    <button type="button" (click)="fetchWines()">
+      Refetch Wines
+    </button>
+    <button type="button" (click)="makeFailingCall()">
+      Make Failing Call
+    </button>
+    <button type="button" (click)="setAuthToken()">
+      Set Auth Token
+    </button>
+    <button type="button" (click)="resetAuthToken()">
+      Reset Auth Token
+    </button>
+</div>
+
+
+<div class = "main-container">
+
+<div class="grid-container">
+      <div class="grid-item" *ngFor="let wine of wines$ | async as wines">
+        <app-wine-item
+        [wine]="wine"
+        ></app-wine-item>
+      </div>
+</div>
+</div>
+
+<div class = "next-page">
+  <button type="button" (click)="nextPage()">Next page</button>
+</div>
+
+
+  
